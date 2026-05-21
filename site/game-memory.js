@@ -43,9 +43,10 @@
       if (card.matched) btn.classList.add("is-matched");
       if (flipped.includes(idx)) btn.classList.add("is-flipped");
       btn.innerHTML =
-        '<span class="memory-card__inner">' +
-        '<span class="memory-card__back">?</span>' +
-        '<span class="memory-card__face">' + card.emoji + "</span></span>";
+        '<div class="memory-card__inner">' +
+        '<div class="memory-card__back">?</div>' +
+        '<div class="memory-card__face">' + card.emoji + "</div></div>";
+      btn.setAttribute("aria-label", card.matched || flipped.includes(idx) ? card.emoji : "카드 뒤집기");
       btn.addEventListener("click", () => onFlip(idx));
       grid.appendChild(btn);
     });
