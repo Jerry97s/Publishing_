@@ -10,8 +10,8 @@
 |------|------|
 | 목적 | HTML 시맨틱, CSS 레이아웃·컴포넌트, 반응형, 폼·테이블 UI 연습 |
 | 메인 진입 | [`site/index.html`](site/index.html) |
-| 페이지 수 | **18개** HTML (`site/` 17 + 루트 연습 파일 2) |
-| JS 사용 | 솔리테어(`solitaire.js`)만 — 나머지는 HTML/CSS |
+| 페이지 수 | **19개** HTML (`site/` 18 + 루트 연습 파일 2) |
+| JS 사용 | **게임 허브** (`games.html`) — 카드게임·짝맞추기·틱택토·숫자 맞추기 |
 | 디자인 톤 | 흰 배경 · 포인트 컬러 `#03c75a` · 카드형 패널 |
 
 ---
@@ -43,9 +43,12 @@ Publishing_/
     ├── contact.html      # 1:1 문의 폼
     ├── mypage.html       # 마이페이지·탭
     ├── notice.html       # 공지 목록
-    ├── solitaire.html    # 솔리테어 게임
-    ├── solitaire.css
-    └── solitaire.js
+    ├── games.html        # 게임 허브 (탭 4종)
+    ├── games.css / games.js
+    ├── cardgame.js       # 카드게임 (클론다이크)
+    ├── game-memory.js / game-tictactoe.js / game-number.js
+    ├── solitaire.css     # 카드게임 스타일
+    └── solitaire.html    # → games.html#cardgame 리다이렉트
 ```
 
 ---
@@ -85,10 +88,13 @@ Publishing_/
 | `gallery.html` | 4열 그리드, hover 확대 | `aspect-ratio`, transform |
 | `calendar.html` | 7열 달력 | CSS Grid, 오늘 강조 |
 
-### 게임 (JavaScript)
-| 페이지 | 설명 |
-|--------|------|
-| `solitaire.html` | **클론다이크 솔리테어** — 스톡/웨이스트/완성 더미/7열, 클릭·더블클릭 이동, 점수·타이머, 승리 모달 |
+### 게임 (JavaScript) — `games.html`
+| 탭 | 설명 |
+|----|------|
+| **카드게임** | 클론다이크 — 스톡/웨이스트/완성 더미/7열 (구 솔리테어) |
+| **짝맞추기** | 8쌍 메모리 카드, 3D flip |
+| **틱택토** | 3×3, X vs 컴퓨터 O |
+| **숫자 맞추기** | 1~100 UP/DOWN 힌트 |
 
 ---
 
@@ -121,7 +127,7 @@ Publishing_/
 
 ---
 
-## 솔리테어 구현 분석 (`solitaire.js`)
+## 카드게임 구현 분석 (`cardgame.js`)
 
 - **규칙**: Klondike, Draw 1, 빨강/검정 교차, K on empty, A→K foundation
 - **상태**: `stock`, `waste`, `foundations[4]`, `tableau[7]`
@@ -139,7 +145,7 @@ Publishing_/
    cd Publishing_
    ```
 2. 브라우저에서 `site/index.html` 열기 (더블클릭 또는 Live Server)
-3. 솔리테어: `site/solitaire.html`
+3. 게임: `site/games.html`
 
 > GitHub Pages 사용 시: Settings → Pages → Source `main` / folder `/site` → `https://jerry97s.github.io/Publishing_/`
 
@@ -159,7 +165,7 @@ Publishing_/
 2. `index.html` → `highlights.html` 카드/리스트 복제  
 3. `board.html` → `board-view.html` 테이블·상세 흐름  
 4. `login.html` / `signup.html` 폼 속성 실험  
-5. `solitaire.js`에서 `render`, `tryMoveToTableau` 읽으며 로직 이해  
+5. `games.html` 탭 → `cardgame.js` / `game-memory.js` 로직 읽기  
 
 ---
 
@@ -168,8 +174,8 @@ Publishing_/
 - [ ] GitHub Pages 배포  
 - [ ] 모바일 햄버거 메뉴  
 - [ ] 다크 모드 (`body.dark` + 토큰 스왑)  
-- [ ] 솔리테어 실행 취소(undo 스택)  
-- [ ] 스파이더 / 프리셀 추가  
+- [ ] 카드게임 실행 취소(undo 스택)  
+- [ ] 가위바위보 / 스네이크 탭 추가  
 
 ---
 

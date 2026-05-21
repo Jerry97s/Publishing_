@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 게임</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./games.css" />
+  <link rel="stylesheet" href="./solitaire.css" />
+</head>
+<body class="games-page">
+  <a class="skip" href="#main">본문 바로가기</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a class="topbar__link" href="./login.html">로그인</a>
+      <a class="topbar__link" href="./index.html">홈</a>
+      <a class="topbar__link" href="./sitemap.html">전체</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./games.html" aria-current="page">게임</a>
+        <a class="nav__link" href="./features.html">서비스</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--primary" href="./index.html">포털</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="games-head">
+      <div class="container">
+        <h1 class="pageTitle">게임</h1>
+        <p class="pageDesc">탭을 눌러 게임을 바꿀 수 있습니다. 카드게임은 윈도우 클래식 클론다이크 스타일입니다.</p>
+        <div class="game-tabs" role="tablist" aria-label="게임 선택">
+          <button type="button" class="game-tab is-active" role="tab" data-game="cardgame" aria-selected="true">🃏 카드게임</button>
+          <button type="button" class="game-tab" role="tab" data-game="memory" aria-selected="false">🧩 짝맞추기</button>
+          <button type="button" class="game-tab" role="tab" data-game="tictactoe" aria-selected="false">⭕ 틱택토</button>
+          <button type="button" class="game-tab" role="tab" data-game="number" aria-selected="false">🔢 숫자 맞추기</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="games-body">
+      <!-- 카드게임 (클론다이크) -->
+      <section id="game-cardgame" class="game-panel is-active" role="tabpanel" aria-label="카드게임">
+        <div class="sol-toolbar" style="background:rgba(0,0,0,.2);padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:center;">
+          <button type="button" class="sol-btn sol-btn--green" id="card-btn-new">새 게임</button>
+          <button type="button" class="sol-btn" id="card-btn-hint">힌트</button>
+          <button type="button" class="sol-btn" id="card-btn-undo">실행 취소</button>
+          <div class="sol-stats">
+            <span>이동 <strong id="card-stat-moves">0</strong></span>
+            <span>점수 <strong id="card-stat-score">0</strong></span>
+            <span>시간 <strong id="card-stat-time">0:00</strong></span>
+          </div>
+        </div>
+        <div id="card-board" class="sol-board">
+          <section class="sol-upper" aria-label="스톡·웨이스트·완성 더미">
+            <div style="display:flex;gap:12px;align-items:flex-start;">
+              <div class="sol-pile">
+                <div id="card-pile-stock" data-pile="stock" data-stock-click style="position:relative;min-width:76px;min-height:106px;cursor:pointer;"></div>
+                <span class="sol-pile__label">스톡</span>
+              </div>
+              <div class="sol-pile">
+                <div id="card-pile-waste" data-pile="waste" style="position:relative;min-width:120px;min-height:106px;"></div>
+                <span class="sol-pile__label">웨이스트</span>
+              </div>
+            </div>
+            <div class="sol-foundations" aria-label="완성 더미">
+              <div class="sol-pile"><div id="card-found-0" data-pile="foundation" data-index="0" class="sol-slot sol-slot--foundation" data-suit="h"></div></div>
+              <div class="sol-pile"><div id="card-found-1" data-pile="foundation" data-index="1" class="sol-slot sol-slot--foundation" data-suit="d"></div></div>
+              <div class="sol-pile"><div id="card-found-2" data-pile="foundation" data-index="2" class="sol-slot sol-slot--foundation" data-suit="c"></div></div>
+              <div class="sol-pile"><div id="card-found-3" data-pile="foundation" data-index="3" class="sol-slot sol-slot--foundation" data-suit="s"></div></div>
+            </div>
+          </section>
+          <section class="sol-tableau" aria-label="카드 7열">
+            <div class="sol-column" id="card-column-0" data-pile="tableau" data-index="0"></div>
+            <div class="sol-column" id="card-column-1" data-pile="tableau" data-index="1"></div>
+            <div class="sol-column" id="card-column-2" data-pile="tableau" data-index="2"></div>
+            <div class="sol-column" id="card-column-3" data-pile="tableau" data-index="3"></div>
+            <div class="sol-column" id="card-column-4" data-pile="tableau" data-index="4"></div>
+            <div class="sol-column" id="card-column-5" data-pile="tableau" data-index="5"></div>
+            <div class="sol-column" id="card-column-6" data-pile="tableau" data-index="6"></div>
+          </section>
+          <p class="sol-hint">
+            <strong>카드게임</strong> (클론다이크) — 스톡 클릭 · 빨강/검정 교차 · K on empty · 더블클릭으로 완성 더미 이동
+          </p>
+        </div>
+        <div class="sol-msg" id="card-win-modal" role="dialog">
+          <div class="sol-msg__box">
+            <h2>🎉 축하합니다!</h2>
+            <p>카드게임 클리어!</p>
+            <button type="button" class="sol-btn sol-btn--green" id="card-win-close">새 게임</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 짝맞추기 -->
+      <section id="game-memory" class="game-panel" role="tabpanel" aria-label="짝맞추기" hidden>
+        <div class="mini-game">
+          <h2>🧩 짝맞추기</h2>
+          <p class="mini-game__desc">같은 이모지 2장을 찾으세요. 카드 뒤집기 · CSS 3D flip 연습</p>
+          <div class="mini-game__stats">
+            <span>이동 <strong id="mem-moves">0</strong></span>
+            <span>짝 <strong id="mem-pairs">0 / 8</strong></span>
+          </div>
+          <div id="memory-grid" class="memory-grid mini-game__board"></div>
+          <button type="button" class="btn btn--primary" id="mem-btn-new">새 게임</button>
+        </div>
+      </section>
+
+      <!-- 틱택토 -->
+      <section id="game-tictactoe" class="game-panel" role="tabpanel" aria-label="틱택토" hidden>
+        <div class="mini-game">
+          <h2>⭕ 틱택토</h2>
+          <p class="mini-game__desc">X(당신) vs O(컴퓨터). 3×3 버튼 그리드</p>
+          <div class="mini-game__stats">
+            <span>X <strong id="ttt-score-x">0</strong></span>
+            <span>O <strong id="ttt-score-o">0</strong></span>
+            <span>무 <strong id="ttt-score-d">0</strong></span>
+          </div>
+          <p class="ttt-msg" id="ttt-msg"></p>
+          <div id="ttt-grid" class="ttt-grid mini-game__board"></div>
+          <button type="button" class="btn btn--primary" id="ttt-btn-new">새 판</button>
+        </div>
+      </section>
+
+      <!-- 숫자 맞추기 -->
+      <section id="game-number" class="game-panel" role="tabpanel" aria-label="숫자 맞추기" hidden>
+        <div class="mini-game">
+          <h2>🔢 숫자 맞추기</h2>
+          <p class="mini-game__desc">1~100 사이 정수. UP/DOWN 힌트로 맞추기</p>
+          <div class="mini-game__stats">
+            <span>시도 <strong id="num-tries">0</strong></span>
+            <span>상태 <strong id="num-status">대기</strong></span>
+          </div>
+          <div class="num-form">
+            <input class="input" type="number" id="num-input" min="1" max="100" placeholder="숫자" />
+            <button type="button" class="btn btn--primary" id="num-btn-go">확인</button>
+          </div>
+          <div class="num-log" id="num-log"></div>
+          <button type="button" class="btn" id="num-btn-new" style="margin-top:12px;">새 게임</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer__copy">© 2026 StudyPort · <a href="./sitemap.html">전체 페이지</a></p>
+    </div>
+  </footer>
+
+  <script src="./games.js"></script>
+  <script src="./cardgame.js"></script>
+  <script src="./game-memory.js"></script>
+  <script src="./game-tictactoe.js"></script>
+  <script src="./game-number.js"></script>
+</body>
+</html>

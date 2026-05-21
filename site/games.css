@@ -1,0 +1,186 @@
+/* Games hub */
+.games-page{ background: var(--bg); min-height: 100vh; }
+.games-head{
+  padding: 24px 0 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+.games-head .pageTitle{ font-size: 26px; }
+.games-head .pageDesc{ margin-bottom: 16px; }
+
+.game-tabs{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 0 0 0;
+  margin: 0;
+  list-style: none;
+  border-bottom: 2px solid var(--line);
+}
+.game-tab{
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  font-family: inherit;
+}
+.game-tab:hover{ color: var(--text); background: var(--green-light); }
+.game-tab.is-active{
+  color: var(--green-dark);
+  border-bottom-color: var(--green);
+  background: var(--green-light);
+}
+
+.games-body{ padding: 0 0 48px; }
+.game-panel{
+  display: none;
+  animation: fadeIn .2s ease;
+}
+.game-panel.is-active{ display: block; }
+@keyframes fadeIn{
+  from{ opacity: 0; transform: translateY(4px); }
+  to{ opacity: 1; transform: none; }
+}
+
+/* Mini games common */
+.mini-game{
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.mini-game h2{ margin: 0 0 8px; font-size: 20px; }
+.mini-game__desc{ color: var(--muted); font-size: 13px; margin: 0 0 20px; }
+.mini-game__stats{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+.mini-game__stats strong{ color: var(--green-dark); }
+.mini-game__board{ margin: 0 auto 16px; }
+
+/* Memory */
+.memory-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 72px);
+  gap: 10px;
+  justify-content: center;
+}
+.memory-card{
+  width: 72px;
+  height: 96px;
+  border-radius: 8px;
+  border: 2px solid var(--line2);
+  cursor: pointer;
+  perspective: 400px;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+}
+.memory-card__inner{
+  width: 100%;
+  height: 100%;
+  transition: transform .35s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+.memory-card.is-flipped .memory-card__inner,
+.memory-card.is-matched .memory-card__inner{
+  transform: rotateY(180deg);
+}
+.memory-card__face, .memory-card__back{
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+.memory-card__back{
+  background: linear-gradient(135deg, #1a4fc4, #2a5fd4);
+  color: #fff;
+  border: 2px solid #fff;
+}
+.memory-card__face{
+  background: #fff;
+  transform: rotateY(180deg);
+  border: 1px solid #ccc;
+}
+.memory-card.is-matched .memory-card__face{
+  background: var(--green-light);
+  border-color: var(--green);
+}
+
+/* Tic-tac-toe */
+.ttt-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 88px);
+  gap: 6px;
+  justify-content: center;
+}
+.ttt-cell{
+  width: 88px;
+  height: 88px;
+  font-size: 40px;
+  font-weight: 800;
+  border: 2px solid var(--line2);
+  border-radius: 8px;
+  background: #fafafa;
+  cursor: pointer;
+  color: var(--green-dark);
+}
+.ttt-cell:hover:not(:disabled){ background: var(--green-light); }
+.ttt-cell:disabled{ cursor: default; }
+.ttt-cell--o{ color: #1565c0; }
+.ttt-msg{ min-height: 24px; font-weight: 700; margin: 12px 0; }
+
+/* Number guess */
+.num-form{
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.num-form .input{ max-width: 120px; text-align: center; font-size: 18px; }
+.num-log{
+  text-align: left;
+  max-height: 140px;
+  overflow-y: auto;
+  background: #f9f9f9;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  font-size: 13px;
+  color: var(--text2);
+  margin-top: 12px;
+}
+.num-log p{ margin: 4px 0; }
+
+/* Card game panel (클론다이크) */
+#game-cardgame{
+  background: radial-gradient(ellipse at center, #1a7a42 0%, #0b552c 70%, #084422 100%);
+  color: #fff;
+}
+#game-cardgame .sol-toolbar{ margin: 0; }
+#game-cardgame .sol-board{ padding-top: 8px; max-width: 900px; margin: 0 auto; }
+
+@media (max-width: 600px){
+  .memory-grid{ grid-template-columns: repeat(4, 56px); }
+  .memory-card{ width: 56px; height: 76px; }
+  .ttt-grid{ grid-template-columns: repeat(3, 72px); }
+  .ttt-cell{ width: 72px; height: 72px; font-size: 32px; }
+}
