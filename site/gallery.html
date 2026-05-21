@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 갤러리</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./gallery.html" aria-current="page">갤러리</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./index.html">홈</a><span class="breadcrumb__sep">›</span><span>갤러리</span></nav>
+      <h1 class="pageTitle">포토 갤러리</h1>
+      <p class="pageDesc">CSS Grid + aspect-ratio + :hover 확대 · 이미지 대신 이모지 플레이스홀더</p>
+
+      <div class="pageTabs" role="tablist">
+        <span class="pageTab pageTab--active">전체</span>
+        <a class="pageTab" href="#">풍경</a>
+        <a class="pageTab" href="#">스터디</a>
+        <a class="pageTab" href="#">UI</a>
+      </div>
+
+      <div class="gallery" role="list">
+        <div class="gallery__item" role="listitem" title="산">🏔</div>
+        <div class="gallery__item" role="listitem">🌊</div>
+        <div class="gallery__item" role="listitem">🌸</div>
+        <div class="gallery__item" role="listitem">🌆</div>
+        <div class="gallery__item" role="listitem">📷</div>
+        <div class="gallery__item" role="listitem">💻</div>
+        <div class="gallery__item" role="listitem">📐</div>
+        <div class="gallery__item" role="listitem">🎨</div>
+        <div class="gallery__item" role="listitem">☕</div>
+        <div class="gallery__item" role="listitem">📚</div>
+        <div class="gallery__item" role="listitem">✏️</div>
+        <div class="gallery__item" role="listitem">🖥</div>
+      </div>
+      <p class="gallery__caption">실전: background-image + object-fit으로 교체</p>
+
+      <nav class="pagination" style="margin-top:24px;">
+        <span class="is-active">1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+      </nav>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

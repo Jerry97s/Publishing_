@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 솔리테어 (클론다이크)</title>
+  <link rel="stylesheet" href="./solitaire.css" />
+</head>
+<body class="sol-body">
+  <header class="sol-top">
+    <a href="./index.html">← 포털로</a>
+    <span class="sol-top__title">🃏 클론다이크 솔리테어</span>
+    <a href="./sitemap.html">전체 페이지</a>
+  </header>
+
+  <div class="sol-toolbar">
+    <button type="button" class="sol-btn sol-btn--green" id="btn-new">새 게임</button>
+    <button type="button" class="sol-btn" id="btn-hint">힌트</button>
+    <button type="button" class="sol-btn" id="btn-undo">실행 취소</button>
+    <div class="sol-stats">
+      <span>이동 <strong id="stat-moves">0</strong></span>
+      <span>점수 <strong id="stat-score">0</strong></span>
+      <span>시간 <strong id="stat-time">0:00</strong></span>
+    </div>
+  </div>
+
+  <div class="sol-board">
+    <section class="sol-upper" aria-label="스톡·웨이스트·완성 더미">
+      <div style="display:flex;gap:12px;align-items:flex-start;">
+        <div class="sol-pile">
+          <div id="pile-stock" data-pile="stock" data-stock-click style="position:relative;min-width:76px;min-height:106px;cursor:pointer;">
+            <!-- cards rendered by JS -->
+          </div>
+          <span class="sol-pile__label">스톡 (클릭)</span>
+        </div>
+        <div class="sol-pile">
+          <div id="pile-waste" data-pile="waste" style="position:relative;min-width:120px;min-height:106px;"></div>
+          <span class="sol-pile__label">웨이스트</span>
+        </div>
+      </div>
+
+      <div class="sol-foundations" aria-label="완성 더미 A→K">
+        <div class="sol-pile">
+          <div id="found-0" data-pile="foundation" data-index="0" class="sol-slot sol-slot--foundation" data-suit="h"></div>
+        </div>
+        <div class="sol-pile">
+          <div id="found-1" data-pile="foundation" data-index="1" class="sol-slot sol-slot--foundation" data-suit="d"></div>
+        </div>
+        <div class="sol-pile">
+          <div id="found-2" data-pile="foundation" data-index="2" class="sol-slot sol-slot--foundation" data-suit="c"></div>
+        </div>
+        <div class="sol-pile">
+          <div id="found-3" data-pile="foundation" data-index="3" class="sol-slot sol-slot--foundation" data-suit="s"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sol-tableau" aria-label="테이블au 7열">
+      <div class="sol-column" id="tab-0" data-pile="tableau" data-index="0"></div>
+      <div class="sol-column" id="tab-1" data-pile="tableau" data-index="1"></div>
+      <div class="sol-column" id="tab-2" data-pile="tableau" data-index="2"></div>
+      <div class="sol-column" id="tab-3" data-pile="tableau" data-index="3"></div>
+      <div class="sol-column" id="tab-4" data-pile="tableau" data-index="4"></div>
+      <div class="sol-column" id="tab-5" data-pile="tableau" data-index="5"></div>
+      <div class="sol-column" id="tab-6" data-pile="tableau" data-index="6"></div>
+    </section>
+
+    <p class="sol-hint">
+      <strong>Windows 솔리테어</strong> 규칙 (클론다이크 · 한 장씩 뽑기)<br />
+      · 스톡 클릭 → 카드 뽑기 · 빈 칸에는 <strong>K</strong>만 · 아래 더미는 <strong>빨강/검정 교차</strong> + 숫자 하나씩 작게<br />
+      · 카드 선택 후 목적지 클릭 · <strong>더블클릭</strong> → 완성 더미로 자동 이동
+    </p>
+  </div>
+
+  <div class="sol-msg" id="win-modal" role="dialog" aria-labelledby="win-title">
+    <div class="sol-msg__box">
+      <h2 id="win-title">🎉 축하합니다!</h2>
+      <p>4개 무늬를 모두 A부터 K까지 완성했습니다.</p>
+      <button type="button" class="sol-btn sol-btn--green" id="win-close">새 게임</button>
+    </div>
+  </div>
+
+  <script src="./solitaire.js"></script>
+</body>
+</html>

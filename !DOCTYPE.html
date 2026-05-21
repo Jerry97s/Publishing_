@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Study</title>
+
+    <style>
+
+        /* 전체 기본 설정 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0f172a;
+            color: white;
+
+            font-family: Arial, sans-serif;
+
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 카드 */
+        .card {
+
+            width: 420px;
+
+            background-color: #1e293b;
+
+            padding: 32px;
+
+            border-radius: 20px;
+
+            border: 1px solid #334155;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.4);
+
+        }
+
+        /* 제목 */
+        .title {
+
+            font-size: 32px;
+            font-weight: bold;
+
+            color: #60a5fa;
+
+        }
+
+        /* 설명 */
+        .description {
+
+            color: #cbd5e1;
+
+            line-height: 1.6;
+
+        }
+
+        /* input */
+        .input-box {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+            border-radius: 10px;
+
+            background-color: #334155;
+
+            color: white;
+
+            font-size: 16px;
+
+            outline: none;
+
+            transition: 0.3s;
+
+        }
+
+        /* input hover */
+        .input-box:hover {
+
+            background-color: #475569;
+
+        }
+
+        /* input focus */
+        .input-box:focus {
+
+            border: 1px solid #60a5fa;
+
+            box-shadow:
+                0 0 10px rgba(96,165,250,0.5);
+
+        }
+
+        /* 버튼 그룹 */
+        .button-group {
+
+            display: flex;
+
+            gap: 12px;
+
+        }
+
+        /* 버튼 */
+        .btn {
+
+            flex: 1;
+
+            padding: 14px;
+
+            border: none;
+            border-radius: 12px;
+
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+
+        }
+
+        /* primary 버튼 */
+        .btn-primary {
+
+            background-color: #3b82f6;
+            color: white;
+
+        }
+
+        .btn-primary:hover {
+
+            background-color: #2563eb;
+
+            transform: translateY(-2px);
+
+        }
+
+        .btn-primary:active {
+
+            background-color: #1d4ed8;
+
+            transform: scale(0.97);
+
+        }
+
+        /* secondary 버튼 */
+        .btn-secondary {
+
+            background-color: #475569;
+            color: white;
+
+        }
+
+        .btn-secondary:hover {
+
+            background-color: #64748b;
+
+        }
+
+        .btn-secondary:active {
+
+            transform: scale(0.97);
+
+        }
+
+        /* 태그 영역 */
+        .tag-container {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+        }
+
+        /* 태그 */
+        .tag {
+
+            padding:
+                8px 14px;
+
+            background-color: #334155;
+
+            border-radius: 999px;
+
+            font-size: 14px;
+
+            transition: 0.2s;
+
+        }
+
+        .tag:hover {
+
+            background-color: #60a5fa;
+
+            color: #0f172a;
+
+            transform: scale(1.05);
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <div class="title">
+            CSS STUDY
+        </div>
+
+        <div class="description">
+            class, id, hover, active, flex,
+            transition, border, padding 실습 예제
+        </div>
+
+        <input
+            type="text"
+            class="input-box"
+            placeholder="이름 입력"
+        >
+
+        <div class="button-group">
+
+            <button class="btn btn-primary">
+                저장
+            </button>
+
+            <button class="btn btn-secondary">
+                취소
+            </button>
+
+        </div>
+
+        <div class="tag-container">
+
+            <div class="tag">Flex</div>
+            <div class="tag">Hover</div>
+            <div class="tag">Grid</div>
+            <div class="tag">Transition</div>
+            <div class="tag">CSS</div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

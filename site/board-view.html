@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 글 보기</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./board.html">목록</a><a class="nav__link" href="./sitemap.html">더보기</a></nav>
+      <div class="header__actions"><a class="btn" href="./board-write.html">답글</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="./index.html">홈</a><span class="breadcrumb__sep">›</span>
+        <a href="./board.html">카페</a><span class="breadcrumb__sep">›</span>
+        <span>글 보기</span>
+      </nav>
+
+      <article class="article">
+        <header class="article__head">
+          <h1 class="article__title">flex vs grid 언제 쓰나요?</h1>
+          <div class="article__meta">
+            <span>study_kim</span>
+            <span>2026.05.20 14:32</span>
+            <span>조회 89</span>
+            <span class="badge">HTML/CSS</span>
+          </div>
+        </header>
+        <div class="article__body">
+          <p>1차원 배치(한 줄/한 열)는 <strong>flex</strong>, 2차원(행+열 동시)은 <strong>grid</strong>가 편합니다.</p>
+          <p>네비게이션 바, 버튼 그룹 → flex<br />카드 그리드, 포털 2단 레이아웃 → grid</p>
+          <p>이 페이지에서는 본문 타이포, 메타 정보, 하단 버튼 영역을 연습합니다.</p>
+        </div>
+        <div class="article__actions">
+          <a class="btn" href="./board.html">목록</a>
+          <a class="btn btn--primary" href="./board-write.html">수정</a>
+          <button class="btn" type="button">삭제</button>
+        </div>
+      </article>
+
+      <section class="comments" aria-label="댓글">
+        <h2 style="font-size:16px;margin-bottom:12px;">댓글 2</h2>
+        <div class="comment">
+          <span class="comment__author">css_lover</span>
+          <span class="comment__date">2026.05.20 15:01</span>
+          <p class="comment__text">저는 헤더는 flex, 메인+사이드는 grid로 나눠요!</p>
+        </div>
+        <div class="comment">
+          <span class="comment__author">pub_jh</span>
+          <span class="comment__date">2026.05.20 16:20</span>
+          <p class="comment__text">gap 속성 둘 다 지원해서 편합니다 👍</p>
+        </div>
+        <form class="form" style="margin-top:16px;max-width:100%;">
+          <div class="formGroup">
+            <label class="formLabel" for="comment">댓글 작성</label>
+            <textarea class="textarea" id="comment" placeholder="댓글을 입력하세요"></textarea>
+          </div>
+          <button class="btn btn--primary" type="button">등록</button>
+        </form>
+      </section>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

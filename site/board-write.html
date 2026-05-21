@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 글쓰기</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./board.html">목록</a></nav>
+      <div class="header__actions"><a class="btn" href="./board.html">취소</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="./board.html">카페</a><span class="breadcrumb__sep">›</span><span>글쓰기</span>
+      </nav>
+
+      <div class="panel" style="padding:24px;">
+        <h1 class="pageTitle" style="font-size:20px;margin-bottom:20px;">새 글 작성</h1>
+        <form class="form form--wide" style="max-width:100%;" action="./board-view.html" method="get">
+          <div class="formGroup">
+            <label class="formLabel" for="board">게시판</label>
+            <select class="select" id="board" name="board">
+              <option>HTML/CSS</option>
+              <option>질문/답변</option>
+              <option>자유</option>
+            </select>
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="title">제목</label>
+            <input class="input" type="text" id="title" name="title" placeholder="제목을 입력하세요" required />
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="body">내용</label>
+            <textarea class="textarea" id="body" name="body" style="min-height:240px;" placeholder="내용을 입력하세요" required></textarea>
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="file">첨부파일</label>
+            <input class="input" type="file" id="file" name="file" accept="image/*,.pdf" />
+            <p class="formHint">file input 스타일 연습 (브라우저 기본 UI)</p>
+          </div>
+          <div class="formActions">
+            <button class="btn btn--primary" type="submit">등록</button>
+            <a class="btn" href="./board.html">취소</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

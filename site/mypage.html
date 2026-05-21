@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 마이페이지</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./mypage.html" aria-current="page">MY</a><a class="nav__link" href="./sitemap.html">더보기</a></nav>
+      <div class="header__actions"><a class="btn" href="./login.html">로그아웃</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./index.html">홈</a><span class="breadcrumb__sep">›</span><span>마이페이지</span></nav>
+
+      <div class="profileCard">
+        <div class="profileCard__avatar" aria-hidden="true">👤</div>
+        <div>
+          <h1 class="pageTitle" style="font-size:20px;margin:0;">study_user</h1>
+          <p style="margin:4px 0 0;color:var(--muted);font-size:13px;">study@example.com · 가입일 2026.01.15</p>
+          <a class="btn" href="./signup.html" style="margin-top:10px;">프로필 수정</a>
+        </div>
+      </div>
+
+      <nav class="pageTabs" aria-label="마이페이지 탭">
+        <span class="pageTab pageTab--active">활동</span>
+        <a class="pageTab" href="./board.html">내 글</a>
+        <a class="pageTab" href="./pricing.html">주문</a>
+        <a class="pageTab" href="./gallery.html">앨범</a>
+      </nav>
+
+      <div class="grid grid--2">
+        <article class="panel" style="padding:16px;">
+          <h2 style="margin:0 0 12px;font-size:15px;">최근 본 글</h2>
+          <ul class="noticeList">
+            <li><a href="./board-view.html">flex vs grid</a><span class="noticeList__date">오늘</span></li>
+            <li><a href="./highlights.html">뉴스 UI</a><span class="noticeList__date">어제</span></li>
+          </ul>
+        </article>
+        <article class="panel" style="padding:16px;">
+          <h2 style="margin:0 0 12px;font-size:15px;">찜한 상품</h2>
+          <ul class="noticeList">
+            <li><a href="./pricing.html">무선 이어폰</a><span class="noticeList__date">29,900원</span></li>
+            <li><a href="./pricing.html">스터디 램프</a><span class="noticeList__date">24,900원</span></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="alert alert--info" style="margin-top:20px;">
+        탭 UI는 <code>.pageTab</code> / <code>.pageTab--active</code> 클래스로 구현했습니다. JS로 탭 전환도 연습해보세요.
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

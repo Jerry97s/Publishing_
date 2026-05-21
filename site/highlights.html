@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 뉴스</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a class="topbar__link" href="./login.html">로그인</a>
+      <a class="topbar__link" href="./notice.html">공지</a>
+      <a class="topbar__link" href="./board.html">카페</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./highlights.html" aria-current="page">뉴스</a>
+        <a class="nav__link" href="./features.html">서비스</a>
+        <a class="nav__link" href="./pricing.html">쇼핑</a>
+        <a class="nav__link" href="./faq.html">고객센터</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn" href="./index.html">홈으로</a>
+        <a class="btn btn--primary" href="./features.html">서비스</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="pageHead">
+      <div class="container">
+        <h1 class="pageTitle">뉴스</h1>
+        <p class="pageDesc">네이버 뉴스처럼 탭 + 순위 리스트 UI를 연습하는 페이지입니다.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container portal" style="grid-template-columns:1fr;">
+        <article class="panel">
+          <div class="panel__head">
+            <h2 class="panel__title">많이 본 뉴스</h2>
+            <a class="panel__more" href="./index.html">메인으로</a>
+          </div>
+          <div class="tabs">
+            <span class="tab tab--active">전체</span>
+            <span class="tab">IT/과학</span>
+            <span class="tab">경제</span>
+            <span class="tab">생활</span>
+          </div>
+          <ol class="newsList">
+            <li><a class="newsItem" href="#"><span class="newsItem__rank newsItem__rank--hot">1</span><span class="newsItem__text">CSS Grid로 포털 2단 레이아웃 만들기</span><span class="newsItem__meta">연합</span></a></li>
+            <li><a class="newsItem" href="#"><span class="newsItem__rank">2</span><span class="newsItem__text">검색창 border + 초록 버튼 스타일링</span><span class="newsItem__meta">IT</span></a></li>
+            <li><a class="newsItem" href="#"><span class="newsItem__rank">3</span><span class="newsItem__text">뉴스 리스트 ellipsis(말줄임) 처리</span><span class="newsItem__meta">경제</span></a></li>
+            <li><a class="newsItem" href="#"><span class="newsItem__rank">4</span><span class="newsItem__text">탭 active 상태 border-bottom 연습</span><span class="newsItem__meta">생활</span></a></li>
+            <li><a class="newsItem" href="#"><span class="newsItem__rank">5</span><span class="newsItem__text">panel 카드: head + body 구조 분리</span><span class="newsItem__meta">IT</span></a></li>
+            <li><a class="newsItem" href="#"><span class="newsItem__rank">6</span><span class="newsItem__text">hover 시 배경 #f9f9f9 적용</span><span class="newsItem__meta">연합</span></a></li>
+            <li><a class="newsItem" href="#"><span class="newsItem__rank">7</span><span class="newsItem__text">순위 1~3번 색상 강조 (빨강/초록)</span><span class="newsItem__meta">IT</span></a></li>
+            <li><a class="newsItem" href="#"><span class="newsItem__rank">8</span><span class="newsItem__text">5페이지 네비 연결 유지하기</span><span class="newsItem__meta">스터디</span></a></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__links">
+        <a href="./index.html">홈</a>
+        <a href="./features.html">서비스</a>
+        <a href="./pricing.html">쇼핑</a>
+        <a href="./faq.html">고객센터</a>
+      </div>
+      <p class="footer__copy">© 2026 StudyPort. 학습용 템플릿.</p>
+    </div>
+  </footer>
+</body>
+</html>

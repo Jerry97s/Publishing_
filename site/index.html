@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 메인</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+
+  <div class="topbar">
+    <div class="container topbar__inner">
+      <a class="topbar__link" href="./login.html">로그인</a>
+      <a class="topbar__link" href="./notice.html">공지</a>
+      <a class="topbar__link" href="./board.html">카페</a>
+    </div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html" aria-label="StudyPort 홈">
+        <span class="brand__logo">S<span>tudy</span></span>
+      </a>
+
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav__link" href="./index.html" aria-current="page">홈</a>
+        <a class="nav__link" href="./highlights.html">뉴스</a>
+        <a class="nav__link" href="./features.html">서비스</a>
+        <a class="nav__link" href="./pricing.html">쇼핑</a>
+        <a class="nav__link" href="./faq.html">고객센터</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="btn" href="./login.html">로그인</a>
+        <a class="btn btn--primary" href="./sitemap.html">전체</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="searchHero">
+      <div class="container">
+        <h1 class="searchHero__logo" aria-label="StudyPort">StudyPort</h1>
+
+        <form class="searchBox" role="search" action="./search.html">
+          <input class="searchBox__input" type="search" name="q" placeholder="검색어를 입력하세요" aria-label="검색어" />
+          <button class="searchBox__btn" type="submit" aria-label="검색">⌕</button>
+        </form>
+
+        <div class="searchHero__tags" aria-label="인기 검색어">
+          <a class="tag" href="./highlights.html">#HTML/CSS</a>
+          <a class="tag" href="./features.html">#반응형</a>
+          <a class="tag" href="./pricing.html">#쇼핑UI</a>
+          <a class="tag" href="./faq.html">#FAQ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0;">
+      <div class="container">
+        <nav class="shortcuts" aria-label="바로가기 서비스">
+          <a class="shortcut" href="./features.html">
+            <span class="shortcut__icon shortcut__icon--mail">✉</span>
+            <span class="shortcut__label">메일</span>
+          </a>
+          <a class="shortcut" href="./highlights.html">
+            <span class="shortcut__icon shortcut__icon--cafe">☕</span>
+            <span class="shortcut__label">카페</span>
+          </a>
+          <a class="shortcut" href="./highlights.html">
+            <span class="shortcut__icon shortcut__icon--blog">📝</span>
+            <span class="shortcut__label">블로그</span>
+          </a>
+          <a class="shortcut" href="./pricing.html">
+            <span class="shortcut__icon shortcut__icon--shop">🛒</span>
+            <span class="shortcut__label">쇼핑</span>
+          </a>
+          <a class="shortcut" href="./pricing.html">
+            <span class="shortcut__icon shortcut__icon--pay">💳</span>
+            <span class="shortcut__label">페이</span>
+          </a>
+          <a class="shortcut" href="./features.html">
+            <span class="shortcut__icon shortcut__icon--map">📍</span>
+            <span class="shortcut__label">지도</span>
+          </a>
+          <a class="shortcut" href="./features.html">
+            <span class="shortcut__icon shortcut__icon--book">📚</span>
+            <span class="shortcut__label">웹툰</span>
+          </a>
+          <a class="shortcut" href="./solitaire.html">
+            <span class="shortcut__icon shortcut__icon--pay">🃏</span>
+            <span class="shortcut__label">솔리테어</span>
+          </a>
+          <a class="shortcut" href="./gallery.html">
+            <span class="shortcut__icon shortcut__icon--web">🖼</span>
+            <span class="shortcut__label">갤러리</span>
+          </a>
+          <a class="shortcut" href="./calendar.html">
+            <span class="shortcut__icon shortcut__icon--book">📅</span>
+            <span class="shortcut__label">캘린더</span>
+          </a>
+          <a class="shortcut" href="./sitemap.html">
+            <span class="shortcut__icon shortcut__icon--web">🌐</span>
+            <span class="shortcut__label">더보기</span>
+          </a>
+        </nav>
+
+        <div class="portal">
+          <div>
+            <article class="panel">
+              <div class="panel__head">
+                <h2 class="panel__title">뉴스</h2>
+                <a class="panel__more" href="./highlights.html">더보기</a>
+              </div>
+              <div class="tabs" role="tablist" aria-label="뉴스 탭">
+                <span class="tab tab--active" role="tab">많이 본</span>
+                <a class="tab" href="./highlights.html" role="tab">IT/과학</a>
+                <a class="tab" href="./highlights.html" role="tab">경제</a>
+              </div>
+              <ol class="newsList">
+                <li>
+                  <a class="newsItem" href="./highlights.html">
+                    <span class="newsItem__rank newsItem__rank--hot">1</span>
+                    <span class="newsItem__text">HTML/CSS 스터디용 포털 레이아웃 만들기</span>
+                    <span class="newsItem__meta">방금</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="newsItem" href="./highlights.html">
+                    <span class="newsItem__rank">2</span>
+                    <span class="newsItem__text">네이버 스타일 검색창·바로가기 아이콘 연습</span>
+                    <span class="newsItem__meta">1시간</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="newsItem" href="./highlights.html">
+                    <span class="newsItem__rank">3</span>
+                    <span class="newsItem__text">그리드로 뉴스 리스트 + 사이드바 구성하기</span>
+                    <span class="newsItem__meta">3시간</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="newsItem" href="./highlights.html">
+                    <span class="newsItem__rank">4</span>
+                    <span class="newsItem__text">반응형: 2단 → 1단 포털 레이아웃 전환</span>
+                    <span class="newsItem__meta">오늘</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="newsItem" href="./highlights.html">
+                    <span class="newsItem__rank">5</span>
+                    <span class="newsItem__text">초록 포인트 컬러(#03c75a) 변수로 관리하기</span>
+                    <span class="newsItem__meta">어제</span>
+                  </a>
+                </li>
+              </ol>
+            </article>
+
+            <section class="section" style="padding-bottom:0;">
+              <div class="grid grid--4">
+                <a class="card" href="./pricing.html">
+                  <div class="card__thumb">🎧</div>
+                  <h3 class="card__title">오늘의 특가</h3>
+                  <p class="card__desc">쇼핑 카드 UI 연습</p>
+                  <p class="card__price">29,900원</p>
+                </a>
+                <a class="card" href="./pricing.html">
+                  <div class="card__thumb">⌨</div>
+                  <h3 class="card__title">키보드</h3>
+                  <p class="card__desc">가격·썸네일 배치</p>
+                  <p class="card__price">59,000원</p>
+                </a>
+                <a class="card" href="./pricing.html">
+                  <div class="card__thumb">🖱</div>
+                  <h3 class="card__title">마우스</h3>
+                  <p class="card__desc">hover 테두리 효과</p>
+                  <p class="card__price">19,900원</p>
+                </a>
+                <a class="card" href="./pricing.html">
+                  <div class="card__thumb">💡</div>
+                  <h3 class="card__title">스터디 램프</h3>
+                  <p class="card__desc">4열 → 2열 → 1열</p>
+                  <p class="card__price">12,500원</p>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <aside>
+            <article class="panel">
+              <div class="loginBox">
+                <p style="margin:0;color:var(--muted);font-size:13px;">로그인하면 맞춤 뉴스를 볼 수 있어요</p>
+                <a class="loginBox__btn" href="./login.html">StudyPort 로그인</a>
+                <div class="loginBox__links">
+                  <a href="#">아이디 찾기</a>
+                  <span>|</span>
+                  <a href="#">비밀번호 찾기</a>
+                  <span>|</span>
+                  <a href="#">회원가입</a>
+                </div>
+              </div>
+              <div class="banner">📢 스터디 배너 영역</div>
+            </article>
+
+            <article class="panel" style="margin-top:16px;">
+              <div class="panel__head">
+                <h2 class="panel__title">날씨</h2>
+                <span class="panel__more">서울</span>
+              </div>
+              <div style="padding:20px 16px;text-align:center;">
+                <p style="margin:0;font-size:32px;">☀️ 18°</p>
+                <p style="margin:8px 0 0;color:var(--muted);font-size:13px;">맑음 · 미세먼지 좋음</p>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__links">
+        <a href="#">이용약관</a>
+        <a href="#"><strong>개인정보처리방침</strong></a>
+        <a href="#">책임의 한계</a>
+        <a href="./faq.html">고객센터</a>
+        <a href="./sitemap.html">전체 페이지</a>
+      </div>
+      <p class="footer__copy">
+        StudyPort — 네이버 스타일 HTML/CSS 스터디 템플릿 (학습용 · 18페이지)<br />
+        © 2026 StudyPort. 실제 네이버와 무관한 연습용 페이지입니다.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 캘린더</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./sitemap.html">더보기</a></nav>
+      <div class="header__actions"><a class="btn btn--primary" href="./board-write.html">일정 등록</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container layout2">
+      <div>
+        <nav class="breadcrumb"><a href="./index.html">홈</a><span class="breadcrumb__sep">›</span><span>캘린더</span></nav>
+        <h1 class="pageTitle">2026년 5월</h1>
+
+        <div class="calendar" role="grid" aria-label="2026년 5월">
+          <div class="calendar__head">
+            <a href="#" class="btn" style="background:transparent;border-color:rgba(255,255,255,.5);color:#fff;">‹</a>
+            <span>2026.05</span>
+            <a href="#" class="btn" style="background:transparent;border-color:rgba(255,255,255,.5);color:#fff;">›</a>
+          </div>
+          <div class="calendar__grid">
+            <div class="calendar__dow">일</div>
+            <div class="calendar__dow">월</div>
+            <div class="calendar__dow">화</div>
+            <div class="calendar__dow">수</div>
+            <div class="calendar__dow">목</div>
+            <div class="calendar__dow">금</div>
+            <div class="calendar__dow">토</div>
+
+            <div class="calendar__day calendar__day--off"></div>
+            <div class="calendar__day calendar__day--off"></div>
+            <div class="calendar__day calendar__day--off"></div>
+            <div class="calendar__day calendar__day--off"></div>
+            <div class="calendar__day">1</div>
+            <div class="calendar__day">2</div>
+            <div class="calendar__day">3</div>
+            <div class="calendar__day">4</div>
+            <div class="calendar__day">5</div>
+            <div class="calendar__day">6</div>
+            <div class="calendar__day">7</div>
+            <div class="calendar__day">8</div>
+            <div class="calendar__day">9</div>
+            <div class="calendar__day">10</div>
+            <div class="calendar__day">11</div>
+            <div class="calendar__day">12</div>
+            <div class="calendar__day">13</div>
+            <div class="calendar__day">14</div>
+            <div class="calendar__day">15</div>
+            <div class="calendar__day">16</div>
+            <div class="calendar__day">17</div>
+            <div class="calendar__day">18</div>
+            <div class="calendar__day">19</div>
+            <div class="calendar__day calendar__day--today">20<div class="calendar__event">스터디</div></div>
+            <div class="calendar__day">21</div>
+            <div class="calendar__day">22<div class="calendar__event">과제</div></div>
+            <div class="calendar__day">23</div>
+            <div class="calendar__day">24</div>
+            <div class="calendar__day">25</div>
+            <div class="calendar__day">26</div>
+            <div class="calendar__day">27</div>
+            <div class="calendar__day">28</div>
+            <div class="calendar__day">29</div>
+            <div class="calendar__day">30</div>
+            <div class="calendar__day">31</div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel" style="padding:16px;height:fit-content;">
+        <h2 class="panel__title" style="margin:0 0 12px;font-size:15px;">오늘 일정</h2>
+        <ul class="noticeList">
+          <li><a href="./board-view.html">HTML/CSS 스터디 모임</a><span class="noticeList__date">14:00</span></li>
+          <li><a href="./notice.html">공지 확인</a><span class="noticeList__date">16:00</span></li>
+        </ul>
+        <a class="btn btn--primary btn--block" href="./contact.html" style="margin-top:16px;">일정 문의</a>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

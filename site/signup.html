@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 회원가입</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./login.html">로그인</a><a class="nav__link" href="./sitemap.html">더보기</a></nav>
+      <div class="header__actions"><a class="btn" href="./index.html">홈</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./index.html">홈</a><span class="breadcrumb__sep">›</span><span>회원가입</span></nav>
+
+      <div class="panel" style="max-width:520px;margin:0 auto;padding:28px;">
+        <h1 class="pageTitle" style="font-size:22px;margin-bottom:16px;">회원가입</h1>
+        <div class="alert alert--info">HTML5 유효성: required, minlength, pattern, type="email"</div>
+
+        <form class="form form--wide" action="./login.html" method="get">
+          <div class="formGroup">
+            <label class="formLabel" for="email">이메일</label>
+            <input class="input" type="email" id="email" name="email" placeholder="name@example.com" required />
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="nick">닉네임</label>
+            <input class="input" type="text" id="nick" name="nick" minlength="2" maxlength="12" required />
+            <p class="formHint">2~12자</p>
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="pw1">비밀번호</label>
+            <input class="input" type="password" id="pw1" name="pw1" minlength="8" required pattern=".{8,}" />
+            <p class="formHint">8자 이상</p>
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="pw2">비밀번호 확인</label>
+            <input class="input" type="password" id="pw2" name="pw2" required />
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="birth">생년월일</label>
+            <input class="input" type="date" id="birth" name="birth" />
+          </div>
+          <div class="formGroup">
+            <span class="formLabel">성별</span>
+            <div class="formRow">
+              <label class="radio"><input type="radio" name="gender" value="m" checked /> 남</label>
+              <label class="radio"><input type="radio" name="gender" value="f" /> 여</label>
+              <label class="radio"><input type="radio" name="gender" value="n" /> 선택안함</label>
+            </div>
+          </div>
+          <div class="formGroup">
+            <label class="checkbox"><input type="checkbox" required /> 이용약관 동의 (필수)</label><br />
+            <label class="checkbox"><input type="checkbox" /> 마케팅 수신 동의 (선택)</label>
+          </div>
+          <div class="formActions">
+            <button class="btn btn--primary" type="submit">가입하기</button>
+            <a class="btn" href="./login.html">취소</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

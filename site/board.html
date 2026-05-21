@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 게시판</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./board.html" aria-current="page">카페</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+      <div class="header__actions"><a class="btn btn--primary" href="./board-write.html">글쓰기</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./index.html">홈</a><span class="breadcrumb__sep">›</span><span>스터디 카페</span></nav>
+      <h1 class="pageTitle">스터디 카페</h1>
+      <p class="pageDesc">table, badge, pagination 연습</p>
+
+      <div class="boardToolbar">
+        <select class="select" style="width:auto;min-width:120px;">
+          <option>전체 게시판</option>
+          <option>HTML/CSS</option>
+          <option>질문/답변</option>
+        </select>
+        <form class="searchBox" role="search" action="./search.html" style="max-width:280px;flex:1;">
+          <input class="searchBox__input" type="search" placeholder="게시글 검색" />
+          <button class="searchBox__btn" type="submit">⌕</button>
+        </form>
+        <a class="btn btn--primary" href="./board-write.html">글쓰기</a>
+      </div>
+
+      <div class="tableWrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="num">번호</th>
+              <th>제목</th>
+              <th>작성자</th>
+              <th>날짜</th>
+              <th class="num">조회</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="num"><span class="badge badge--red">공지</span></td>
+              <td class="title"><a href="./board-view.html">카페 이용 규칙 안내</a></td>
+              <td>운영자</td>
+              <td>2026.05.01</td>
+              <td class="num">1.2k</td>
+            </tr>
+            <tr>
+              <td class="num">42</td>
+              <td class="title"><a href="./board-view.html">flex vs grid 언제 쓰나요?</a> <span class="badge">NEW</span></td>
+              <td>study_kim</td>
+              <td>2026.05.20</td>
+              <td class="num">89</td>
+            </tr>
+            <tr>
+              <td class="num">41</td>
+              <td class="title"><a href="./board-view.html">네이버 스타일 검색창 따라 만들기</a></td>
+              <td>css_lover</td>
+              <td>2026.05.19</td>
+              <td class="num">156</td>
+            </tr>
+            <tr>
+              <td class="num">40</td>
+              <td class="title"><a href="./board-view.html">반응형 breakpoints 추천</a></td>
+              <td>pub_jh</td>
+              <td>2026.05.18</td>
+              <td class="num">203</td>
+            </tr>
+            <tr>
+              <td class="num">39</td>
+              <td class="title"><a href="./board-view.html">details/summary FAQ 스타일링</a></td>
+              <td>html_begin</td>
+              <td>2026.05.17</td>
+              <td class="num">77</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <nav class="pagination" aria-label="페이지">
+        <a href="#">‹</a>
+        <span class="is-active">1</span>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">›</a>
+      </nav>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

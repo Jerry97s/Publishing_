@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 검색결과</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <form class="searchBox" role="search" action="./search.html" style="flex:1;max-width:400px;">
+        <input class="searchBox__input" type="search" name="q" value="HTML CSS" aria-label="검색" />
+        <button class="searchBox__btn" type="submit">⌕</button>
+      </form>
+      <div class="header__actions"><a class="btn" href="./sitemap.html">더보기</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./index.html">홈</a><span class="breadcrumb__sep">›</span><span>검색결과</span></nav>
+      <p class="pageDesc" style="margin-bottom:20px;"><strong>&quot;HTML CSS&quot;</strong> 검색결과 약 <strong>128</strong>건</p>
+
+      <div class="searchLayout">
+        <aside class="filterPanel">
+          <h3>필터</h3>
+          <div class="filterGroup">
+            <span class="formLabel">기간</span>
+            <select class="select" name="period">
+              <option>전체</option>
+              <option>1주일</option>
+              <option>1개월</option>
+            </select>
+          </div>
+          <div class="filterGroup">
+            <span class="formLabel">유형</span>
+            <label class="checkbox"><input type="checkbox" checked /> 웹문서</label><br />
+            <label class="checkbox"><input type="checkbox" checked /> 뉴스</label><br />
+            <label class="checkbox"><input type="checkbox" /> 이미지</label><br />
+            <label class="checkbox"><input type="checkbox" /> 카페</label>
+          </div>
+          <button class="btn btn--primary btn--block" type="button">적용</button>
+        </aside>
+
+        <div>
+          <article class="resultItem">
+            <h2 class="resultItem__title"><a href="./board-view.html">HTML/CSS 스터디 — 게시판 글 보기 연습</a></h2>
+            <p class="resultItem__url">studyport.local/board-view.html</p>
+            <p class="resultItem__desc">테이블 목록, 상세보기, 댓글 UI까지 한 세트로 연습할 수 있는 페이지입니다.</p>
+          </article>
+          <article class="resultItem">
+            <h2 class="resultItem__title"><a href="./gallery.html">갤러리 그리드 레이아웃 가이드</a></h2>
+            <p class="resultItem__url">studyport.local/gallery.html</p>
+            <p class="resultItem__desc">aspect-ratio, hover scale, 4열 반응형 그리드를 다룹니다.</p>
+          </article>
+          <article class="resultItem">
+            <h2 class="resultItem__title"><a href="./highlights.html">뉴스 포털 탭 UI 만들기</a></h2>
+            <p class="resultItem__url">studyport.local/highlights.html</p>
+            <p class="resultItem__desc">네이버 스타일 뉴스 리스트와 순위 번호 스타일링.</p>
+          </article>
+          <article class="resultItem">
+            <h2 class="resultItem__title"><a href="./calendar.html">CSS만으로 캘린더 그리드</a></h2>
+            <p class="resultItem__url">studyport.local/calendar.html</p>
+            <p class="resultItem__desc">7열 grid, 오늘 날짜 강조, 일정 텍스트 표시.</p>
+          </article>
+
+          <nav class="pagination" aria-label="페이지">
+            <a href="#">‹</a>
+            <span class="is-active">1</span>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">›</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

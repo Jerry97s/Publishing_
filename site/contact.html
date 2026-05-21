@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 문의하기</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./faq.html">FAQ</a><a class="nav__link" href="./contact.html" aria-current="page">문의</a></nav>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container layout2">
+      <div class="panel" style="padding:24px;">
+        <nav class="breadcrumb"><a href="./faq.html">고객센터</a><span class="breadcrumb__sep">›</span><span>문의하기</span></nav>
+        <h1 class="pageTitle" style="font-size:20px;">1:1 문의</h1>
+        <div class="alert alert--success">폼 전송은 학습용 — action 없이 UI만 연습</div>
+
+        <form class="form form--wide" style="max-width:100%;">
+          <div class="formGroup">
+            <label class="formLabel" for="type">문의 유형</label>
+            <select class="select" id="type" name="type" required>
+              <option value="">선택하세요</option>
+              <option>회원/로그인</option>
+              <option>결제/환불</option>
+              <option>기술/버그</option>
+              <option>기타</option>
+            </select>
+          </div>
+          <div class="formRow">
+            <div class="formGroup" style="flex:1;">
+              <label class="formLabel" for="name">이름</label>
+              <input class="input" type="text" id="name" required />
+            </div>
+            <div class="formGroup" style="flex:1;">
+              <label class="formLabel" for="tel">연락처</label>
+              <input class="input" type="tel" id="tel" placeholder="010-0000-0000" pattern="[0-9\-]+" />
+            </div>
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="email">이메일</label>
+            <input class="input" type="email" id="email" required />
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="msg">문의 내용</label>
+            <textarea class="textarea" id="msg" required style="min-height:160px;"></textarea>
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="attach">첨부</label>
+            <input class="input" type="file" id="attach" multiple />
+          </div>
+          <div class="formActions">
+            <button class="btn btn--primary" type="submit">제출</button>
+            <a class="btn" href="./faq.html">취소</a>
+          </div>
+        </form>
+      </div>
+
+      <aside>
+        <article class="panel" style="padding:16px;margin-bottom:16px;">
+          <h2 style="margin:0 0 10px;font-size:15px;">연락 안내</h2>
+          <p style="margin:0;font-size:13px;color:var(--muted);line-height:1.7;">
+            평일 09:00–18:00<br />
+            점심 12:00–13:00<br />
+            <a href="./faq.html" style="color:var(--green-dark);">FAQ 먼저 확인</a>
+          </p>
+        </article>
+        <article class="panel" style="padding:16px;">
+          <h2 style="margin:0 0 10px;font-size:15px;">빠른 링크</h2>
+          <ul class="noticeList">
+            <li><a href="./login.html">로그인</a></li>
+            <li><a href="./notice.html">공지사항</a></li>
+            <li><a href="./sitemap.html">전체 페이지</a></li>
+          </ul>
+        </article>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>
