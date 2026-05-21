@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 블로그</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="topbar"><div class="container topbar__inner">
+    <a class="topbar__link" href="./login.html">로그인</a>
+    <a class="topbar__link" href="./blog.html">내 블로그</a>
+    <a class="topbar__link" href="./index.html">홈</a>
+  </div></div>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./mail.html">메일</a>
+        <a class="nav__link" href="./cafe.html">카페</a>
+        <a class="nav__link" href="./blog.html" aria-current="page">블로그</a>
+        <a class="nav__link" href="./highlights.html">뉴스</a>
+        <a class="nav__link" href="./games.html">게임</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+      <div class="header__actions"><a class="btn btn--primary" href="./board-write.html">글쓰기</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <h1 class="pageTitle">블로그</h1>
+      <p class="pageDesc">썸네일 + 제목 + 요약 카드 리스트</p>
+
+      <div class="pageTabs">
+        <span class="pageTab pageTab--active">전체</span>
+        <a class="pageTab" href="./blog.html">이웃</a>
+        <a class="pageTab" href="./blog.html">추천</a>
+      </div>
+
+      <div class="blogList">
+        <a class="blogCard" href="./blog-view.html">
+          <div class="blogCard__thumb">📐</div>
+          <div>
+            <h2 class="blogCard__title">CSS Grid로 포털 2단 레이아웃 만들기</h2>
+            <p class="blogCard__meta">pub_jh · 2026.05.20 · 댓글 24</p>
+            <p class="blogCard__excerpt">메인 콘텐츠와 사이드바를 grid-template-columns로 나누는 방법을 정리했습니다.</p>
+          </div>
+        </a>
+        <a class="blogCard" href="./blog-view.html">
+          <div class="blogCard__thumb">🎨</div>
+          <div>
+            <h2 class="blogCard__title">네이버 스타일 검색창 CSS 따라잡기</h2>
+            <p class="blogCard__meta">css_lover · 2026.05.19 · 댓글 18</p>
+            <p class="blogCard__excerpt">초록 테두리, 둥근 버튼, 태그 칩까지 한 번에 연습해봅시다.</p>
+          </div>
+        </a>
+        <a class="blogCard" href="./blog-view.html">
+          <div class="blogCard__thumb">🃏</div>
+          <div>
+            <h2 class="blogCard__title">게임 탭 UI + 카드게임 넣기</h2>
+            <p class="blogCard__meta">study_kim · 2026.05.18 · 댓글 9</p>
+            <p class="blogCard__excerpt">games.html에서 패널 전환과 클론다이크 카드게임 구조를 소개합니다.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

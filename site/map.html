@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 지도</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./map.html" aria-current="page">지도</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container">
+      <h1 class="pageTitle">지도</h1>
+      <form class="searchBox" role="search" style="max-width:560px;margin-bottom:16px;">
+        <input class="searchBox__input" type="search" placeholder="장소, 주소 검색" value="강남역 스터디 카페" />
+        <button class="searchBox__btn" type="submit">⌕</button>
+      </form>
+      <div class="mapBox" role="img" aria-label="지도 샘플 영역">
+        <span class="mapPin" aria-hidden="true">📍</span>
+      </div>
+      <h2 style="font-size:16px;margin-bottom:12px;">주변 장소</h2>
+      <ul class="list placeList">
+        <li class="list__item"><span>📍</span><span><strong>스터디존 강남점</strong><br /><small style="color:var(--muted)">도보 3분 · 카페</small></span></li>
+        <li class="list__item"><span>📍</span><span><strong>HTML/CSS 학원</strong><br /><small style="color:var(--muted)">도보 7분</small></span></li>
+        <li class="list__item"><span>📍</span><span><strong>코딩 북카페</strong><br /><small style="color:var(--muted)">도보 12분</small></span></li>
+      </ul>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort · <a href="./index.html">홈</a></p></div></footer>
+</body>
+</html>

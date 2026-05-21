@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 메일 쓰기</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./mail.html">메일</a></nav>
+      <div class="header__actions"><a class="btn" href="./mail.html">취소</a></div>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./mail.html">메일</a><span class="breadcrumb__sep">›</span><span>쓰기</span></nav>
+      <div class="panel" style="padding:24px;max-width:720px;margin:0 auto;">
+        <h1 class="pageTitle" style="font-size:20px;">메일 쓰기</h1>
+        <form class="form form--wide" style="max-width:100%;" action="./mail.html" method="get">
+          <div class="formGroup">
+            <label class="formLabel" for="to">받는 사람</label>
+            <input class="input" type="email" id="to" placeholder="name@example.com" required />
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="subj">제목</label>
+            <input class="input" type="text" id="subj" required />
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="body">내용</label>
+            <textarea class="textarea" id="body" style="min-height:200px;" required></textarea>
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="attach">첨부</label>
+            <input class="input" type="file" id="attach" multiple />
+          </div>
+          <div class="formActions">
+            <button class="btn btn--primary" type="submit">보내기</button>
+            <a class="btn" href="./mail.html">취소</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

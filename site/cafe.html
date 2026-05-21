@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 카페</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <div class="topbar"><div class="container topbar__inner">
+    <a class="topbar__link" href="./login.html">로그인</a>
+    <a class="topbar__link" href="./board-write.html">글쓰기</a>
+    <a class="topbar__link" href="./index.html">홈</a>
+  </div></div>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./mail.html">메일</a>
+        <a class="nav__link" href="./cafe.html" aria-current="page">카페</a>
+        <a class="nav__link" href="./blog.html">블로그</a>
+        <a class="nav__link" href="./highlights.html">뉴스</a>
+        <a class="nav__link" href="./pricing.html">쇼핑</a>
+        <a class="nav__link" href="./games.html">게임</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--primary" href="./board-write.html">카페 만들기</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./index.html">홈</a><span class="breadcrumb__sep">›</span><span>카페</span></nav>
+      <h1 class="pageTitle">스터디 카페</h1>
+      <p class="pageDesc">인기 카페 목록 — 카드를 누르면 게시판으로 이동합니다.</p>
+
+      <form class="searchBox" role="search" action="./search.html" style="max-width:480px;margin-bottom:20px;">
+        <input class="searchBox__input" type="search" name="q" placeholder="카페 이름 검색" />
+        <button class="searchBox__btn" type="submit">⌕</button>
+      </form>
+
+      <div class="cafeGrid">
+        <a class="cafeCard" href="./board.html">
+          <h2 class="cafeCard__name">☕ HTML/CSS 스터디</h2>
+          <p class="cafeCard__meta">회원 12,340 · 글 8,902</p>
+          <div class="cafeCard__tags"><span class="badge">인기</span><span class="badge badge--gray">개발</span></div>
+        </a>
+        <a class="cafeCard" href="./board.html">
+          <h2 class="cafeCard__name">☕ 퍼블리싱 연습방</h2>
+          <p class="cafeCard__meta">회원 5,210 · 글 2,104</p>
+          <div class="cafeCard__tags"><span class="badge">NEW</span><span class="badge badge--gray">디자인</span></div>
+        </a>
+        <a class="cafeCard" href="./board.html">
+          <h2 class="cafeCard__name">☕ 코딩 초보 카페</h2>
+          <p class="cafeCard__meta">회원 22,100 · 글 15,330</p>
+          <div class="cafeCard__tags"><span class="badge badge--gray">Q&amp;A</span></div>
+        </a>
+        <a class="cafeCard" href="./board.html">
+          <h2 class="cafeCard__name">☕ 반응형 웹 연구소</h2>
+          <p class="cafeCard__meta">회원 3,890 · 글 991</p>
+          <div class="cafeCard__tags"><span class="badge badge--gray">Grid</span></div>
+        </a>
+        <a class="cafeCard" href="./board.html">
+          <h2 class="cafeCard__name">☕ 포트폴리오 공유</h2>
+          <p class="cafeCard__meta">회원 7,650 · 글 4,220</p>
+          <div class="cafeCard__tags"><span class="badge badge--gray">취업</span></div>
+        </a>
+        <a class="cafeCard" href="./board.html">
+          <h2 class="cafeCard__name">☕ 자격증 스터디</h2>
+          <p class="cafeCard__meta">회원 9,102 · 글 6,778</p>
+          <div class="cafeCard__tags"><span class="badge badge--gray">정보처리</span></div>
+        </a>
+      </div>
+
+      <p style="margin-top:24px;text-align:center;">
+        <a class="btn btn--primary" href="./board.html">전체 게시판 보기</a>
+      </p>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer__links">
+    <a href="./terms.html">이용약관</a><a href="./privacy.html">개인정보</a>
+  </div><p class="footer__copy container">© 2026 StudyPort</p></footer>
+</body>
+</html>

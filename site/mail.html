@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 메일</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip" href="#main">본문 바로가기</a>
+  <div class="topbar"><div class="container topbar__inner">
+    <a class="topbar__link" href="./login.html">로그인</a>
+    <a class="topbar__link" href="./mail-compose.html">메일쓰기</a>
+    <a class="topbar__link" href="./index.html">홈</a>
+  </div></div>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./mail.html" aria-current="page">메일</a>
+        <a class="nav__link" href="./cafe.html">카페</a>
+        <a class="nav__link" href="./blog.html">블로그</a>
+        <a class="nav__link" href="./highlights.html">뉴스</a>
+        <a class="nav__link" href="./pricing.html">쇼핑</a>
+        <a class="nav__link" href="./games.html">게임</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn btn--primary" href="./mail-compose.html">메일 쓰기</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./index.html">홈</a><span class="breadcrumb__sep">›</span><span>메일</span></nav>
+      <h1 class="pageTitle">메일</h1>
+      <p class="pageDesc">받은편지함 · 폴더 사이드바 · 메일 리스트 UI</p>
+
+      <div class="mailLayout">
+        <nav class="mailFolders" aria-label="메일 폴더">
+          <a class="is-active" href="./mail.html">받은편지함 <span class="badge">5</span></a>
+          <a href="./mail.html">보낸편지함</a>
+          <a href="./mail.html">임시보관함</a>
+          <a href="./mail.html">스팸</a>
+          <a href="./mail.html">휴지통</a>
+        </nav>
+        <div class="mailList">
+          <a class="mailRow mailRow--unread" href="./mail-view.html">
+            <span class="mailRow__star">★</span>
+            <span>study_bot</span>
+            <span class="mailRow__subject">HTML/CSS 스터디 환영합니다</span>
+            <span>오늘</span>
+          </a>
+          <a class="mailRow mailRow--unread" href="./mail-view.html">
+            <span>☆</span><span>pub_team</span><span class="mailRow__subject">이번 주 과제: 반응형 그리드</span><span>오늘</span>
+          </a>
+          <a class="mailRow" href="./mail-view.html">
+            <span>☆</span><span>shop</span><span class="mailRow__subject">주문이 배송 시작되었습니다</span><span>어제</span>
+          </a>
+          <a class="mailRow" href="./mail-view.html">
+            <span>☆</span><span>cafe_admin</span><span class="mailRow__subject">카페 가입 승인 안내</span><span>5/18</span>
+          </a>
+          <a class="mailRow" href="./mail-view.html">
+            <span>☆</span><span>calendar</span><span class="mailRow__subject">내일 스터디 일정 알림</span><span>5/17</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container footer__links">
+    <a href="./terms.html">이용약관</a><a href="./privacy.html"><strong>개인정보처리방침</strong></a><a href="./disclaimer.html">책임의 한계</a>
+  </div><p class="footer__copy container">© 2026 StudyPort</p></footer>
+</body>
+</html>

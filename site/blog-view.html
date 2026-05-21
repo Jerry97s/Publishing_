@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 블로그 글</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./blog.html" aria-current="page">블로그</a></nav>
+      <div class="header__actions"><a class="btn" href="./blog.html">목록</a></div>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container layout2">
+      <article class="article">
+        <header class="article__head">
+          <h1 class="article__title">CSS Grid로 포털 2단 레이아웃 만들기</h1>
+          <div class="article__meta"><span>pub_jh</span><span>2026.05.20</span><span>조회 1,204</span></div>
+        </header>
+        <div class="article__body">
+          <p>포털 사이트는 보통 <code>.portal { grid-template-columns: 1fr 320px; }</code> 형태로 본문과 사이드를 나눕니다.</p>
+          <p>모바일에서는 미디어쿼리로 1열로 바꿔주면 됩니다.</p>
+          <p>이 글은 블로그 상세 페이지 레이아웃 연습용 샘플입니다.</p>
+        </div>
+        <div class="article__actions">
+          <a class="btn" href="./blog.html">목록</a>
+          <button class="btn" type="button">공감 12</button>
+        </div>
+      </article>
+      <aside class="panel" style="padding:16px;height:fit-content;">
+        <h2 style="margin:0 0 12px;font-size:15px;">이 블로거의 다른 글</h2>
+        <ul class="noticeList">
+          <li><a href="./blog-view.html">검색창 스타일링</a></li>
+          <li><a href="./blog-view.html">Flex vs Grid</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

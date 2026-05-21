@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 웹툰</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./webtoon.html" aria-current="page">웹툰</a>
+        <a class="nav__link" href="./games.html">게임</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container">
+      <h1 class="pageTitle">웹툰</h1>
+      <p class="pageDesc">요일별 · 썸네일 카드 그리드</p>
+      <div class="pageTabs">
+        <span class="pageTab pageTab--active">전체</span>
+        <a class="pageTab" href="./webtoon.html">월</a>
+        <a class="pageTab" href="./webtoon.html">화</a>
+        <a class="pageTab" href="./webtoon.html">수</a>
+      </div>
+      <div class="webtoonGrid">
+        <a class="webtoonCard" href="./webtoon-view.html">
+          <div class="webtoonCard__cover">📚</div>
+          <div class="webtoonCard__body"><p class="webtoonCard__title">HTML/CSS 웹툰</p><p class="webtoonCard__ep">업데이트 42화</p></div>
+        </a>
+        <a class="webtoonCard" href="./webtoon-view.html">
+          <div class="webtoonCard__cover" style="background:linear-gradient(160deg,#f093fb,#f5576c);">☕</div>
+          <div class="webtoonCard__body"><p class="webtoonCard__title">카페 탐험대</p><p class="webtoonCard__ep">업데이트 18화</p></div>
+        </a>
+        <a class="webtoonCard" href="./webtoon-view.html">
+          <div class="webtoonCard__cover" style="background:linear-gradient(160deg,#4facfe,#00f2fe);">🎮</div>
+          <div class="webtoonCard__body"><p class="webtoonCard__title">게임 천재</p><p class="webtoonCard__ep">업데이트 7화</p></div>
+        </a>
+        <a class="webtoonCard" href="./webtoon-view.html">
+          <div class="webtoonCard__cover" style="background:linear-gradient(160deg,#43e97b,#38f9d7);">💻</div>
+          <div class="webtoonCard__body"><p class="webtoonCard__title">코딩 학원기</p><p class="webtoonCard__ep">업데이트 31화</p></div>
+        </a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

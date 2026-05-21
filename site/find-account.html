@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 아이디/비밀번호 찾기</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav"><a class="nav__link" href="./login.html">로그인</a></nav>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container">
+      <div class="panel" style="max-width:480px;margin:0 auto;padding:24px;">
+        <h1 class="pageTitle" style="font-size:20px;text-align:center;">계정 찾기</h1>
+        <div class="pageTabs" style="margin-top:16px;">
+          <span class="pageTab pageTab--active">아이디 찾기</span>
+          <a class="pageTab" href="./find-account.html#pw">비밀번호 찾기</a>
+        </div>
+        <form class="form" style="margin-top:16px;" action="./login.html">
+          <div class="formGroup">
+            <label class="formLabel" for="name">이름</label>
+            <input class="input" type="text" id="name" required />
+          </div>
+          <div class="formGroup">
+            <label class="formLabel" for="email">가입 이메일</label>
+            <input class="input" type="email" id="email" required />
+          </div>
+          <button class="btn btn--primary btn--block" type="submit">아이디 찾기</button>
+        </form>
+        <p class="formHint" style="text-align:center;margin-top:16px;">
+          <a href="./login.html">로그인</a> · <a href="./signup.html">회원가입</a>
+        </p>
+      </div>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

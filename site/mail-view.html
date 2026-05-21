@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 메일 읽기</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav">
+        <a class="nav__link" href="./mail.html" aria-current="page">메일</a>
+        <a class="nav__link" href="./index.html">홈</a>
+      </nav>
+      <div class="header__actions">
+        <a class="btn" href="./mail.html">목록</a>
+        <a class="btn btn--primary" href="./mail-compose.html">답장</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container">
+      <nav class="breadcrumb"><a href="./mail.html">메일</a><span class="breadcrumb__sep">›</span><span>읽기</span></nav>
+      <article class="article">
+        <header class="article__head">
+          <h1 class="article__title">HTML/CSS 스터디 환영합니다</h1>
+          <div class="article__meta">
+            <span>보낸 사람: study_bot &lt;bot@studyport.local&gt;</span>
+            <span>2026.05.20 09:00</span>
+          </div>
+        </header>
+        <div class="article__body">
+          <p>안녕하세요, StudyPort입니다.</p>
+          <p>메일 목록 → 상세 보기 → 답장(작성) 페이지로 이어지는 흐름을 연습할 수 있습니다.</p>
+          <p>좋은 스터디 되세요!</p>
+        </div>
+        <div class="article__actions">
+          <a class="btn" href="./mail.html">목록</a>
+          <a class="btn btn--primary" href="./mail-compose.html">답장</a>
+          <button class="btn" type="button">삭제</button>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>

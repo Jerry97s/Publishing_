@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StudyPort — 페이</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="./index.html"><span class="brand__logo">S<span>tudy</span></span></a>
+      <nav class="nav">
+        <a class="nav__link" href="./index.html">홈</a>
+        <a class="nav__link" href="./pay.html" aria-current="page">페이</a>
+        <a class="nav__link" href="./pricing.html">쇼핑</a>
+        <a class="nav__link" href="./sitemap.html">더보기</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container">
+      <h1 class="pageTitle">StudyPort Pay</h1>
+      <div class="payHero">
+        <p style="margin:0;opacity:.85;font-size:14px;">보유 포인트</p>
+        <p class="payHero__balance">12,500 P</p>
+        <div class="payActions">
+          <a class="btn" href="./pricing.html">충전</a>
+          <a class="btn" href="./pricing.html">송금</a>
+          <a class="btn" href="./contact.html">문의</a>
+        </div>
+      </div>
+      <h2 style="font-size:16px;margin-bottom:12px;">최근 이용 내역</h2>
+      <div class="tableWrap">
+        <table class="table">
+          <thead><tr><th>날짜</th><th>내용</th><th>금액</th></tr></thead>
+          <tbody>
+            <tr><td>05.20</td><td>쇼핑 결제</td><td style="color:#c62828;">-29,900원</td></tr>
+            <tr><td>05.19</td><td>포인트 충전</td><td style="color:var(--green-dark);">+50,000P</td></tr>
+            <tr><td>05.18</td><td>송금 받기</td><td style="color:var(--green-dark);">+10,000원</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:16px;"><a class="btn btn--primary" href="./pricing.html">쇼핑하러 가기</a></p>
+    </div>
+  </main>
+  <footer class="footer"><div class="container"><p class="footer__copy">© 2026 StudyPort</p></div></footer>
+</body>
+</html>
