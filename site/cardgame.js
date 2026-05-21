@@ -469,30 +469,30 @@
   function bindEvents() {
     root.querySelector("#card-btn-new").addEventListener("click", newGame);
     root.querySelector("#card-btn-hint").addEventListener("click", () => {
-    for (let c = 0; c < 7; c++) {
-      const pile = state.tableau[c];
-      for (let i = pile.length - 1; i >= 0; i--) {
-        if (!pile[i].faceUp) continue;
-        const card = pile[i];
+      for (let c = 0; c < 7; c++) {
+        const pile = state.tableau[c];
+        for (let i = pile.length - 1; i >= 0; i--) {
+          if (!pile[i].faceUp) continue;
+          const card = pile[i];
+          for (let f = 0; f < 4; f++) {
+            if (canPlaceOnFoundation(card, f)) {
+              alert("힌트: " + RANK_LABEL[card.rank] + SUIT_SYM[card.suit] + " → 완성 더미로 옮길 수 있어요");
+              return;
+            }
+          }
+        }
+      }
+      if (state.waste.length) {
+        const card = state.waste[state.waste.length - 1];
         for (let f = 0; f < 4; f++) {
           if (canPlaceOnFoundation(card, f)) {
-            alert("힌트: " + RANK_LABEL[card.rank] + SUIT_SYM[card.suit] + " → 완성 더미로 옮길 수 있어요");
+            alert("힌트: 웨이스트 맨 위 카드를 완성 더미로!");
             return;
           }
         }
       }
-    }
-    if (state.waste.length) {
-      const card = state.waste[state.waste.length - 1];
-      for (let f = 0; f < 4; f++) {
-        if (canPlaceOnFoundation(card, f)) {
-          alert("힌트: 웨이스트 맨 위 카드를 완성 더미로!");
-          return;
-        }
-      }
-    }
-    alert("힌트: 스톡을 눌러 카드를 뽑거나, 빨강/검정 교차로 내림차순 쌓아보세요.");
-  });
+      alert("힌트: 스톡을 눌러 카드를 뽑거나, 빨강/검정 교차로 내림차순 쌓아보세요.");
+    });
     root.querySelector("#card-btn-undo").addEventListener("click", () => {
       alert("실행 취소는 다음 단계 과제로! (배열 히스토리 스택 연습)");
     });
@@ -505,9 +505,17 @@
   }
 
   window.initCardGame = function () {
-    if (started) return;
-    started = true;
+    if (started) {
+      render();
+      if (!timerId && state) startTimer();
+      return;
+    }
     root = document.getElementById("game-cardgame");
+    if (!root) {
+      console.error("[cardgame] #game-cardgame not found");
+      return;
+    }
+    started = true;
     el = {
       stock: root.querySelector("#card-pile-stock"),
       waste: root.querySelector("#card-pile-waste"),
@@ -524,5 +532,9 @@
 
   window.pauseCardGame = function () {
     stopTimer();
+  };
+
+  window.resumeCardGame = function () {
+    if (started && state && !timerId) startTimer();
   };
 })();
